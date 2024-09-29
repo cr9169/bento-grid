@@ -1,0 +1,104 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  min-width: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+
+  --clr-primary: hsl(256, 67%, 59%);
+  --clr-primary-light: hsl(254, 88%, 90%);
+  --clr-secondary: hsl(39, 100%, 71%);
+  --clr-secondary-light: hsl(31, 66%, 93%);
+  --clr-light: hsl(0, 0%, 100%);
+  --clr-dark: hsl(0, 0%, 7%);
+
+  --fs-base: 1.125rem;
+
+  --ff-primary: "DM Sans", sans-serif;
+
+  --fw-regular: 400;
+  --fw-bold: 500;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--ff-primary);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+.main-container {
+  height: 100dvh;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.main-container div {
+  border-radius: 5%;
+}
+
+.item-1 {
+  background-color: var(--clr-secondary-light);
+}
+
+.item-2 {
+  background-color: var(--clr-primary);
+}
+.item-3 {
+  background-color: var(--clr-primary-light);
+}
+.item-4 {
+  background-color: var(--clr-light);
+}
+.item-5 {
+  background-color: var(--clr-secondary);
+}
+.item-6 {
+  background-color: var(--clr-secondary);
+}
+.item-7 {
+  background-color: var(--clr-light);
+}
+
+.item-8 {
+  background-color: var(--clr-primary);
+}
+
+@media (max-width: 375px) {
+  .main-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
